@@ -17,5 +17,3 @@ temp = random.sample(mix, length)
 password = "".join(temp)
 
 print(password)
-
-
