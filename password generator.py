@@ -1,19 +1,34 @@
-import random
-import string
 
-print("welcome to python password generator:)")
+def main():
 
-length = int(input("how long do you want your password to be? "))
+    import random
+    import string
 
-lower = string.ascii_lowercase
-upper = string.ascii_uppercase
-num = string.digits
-symbols = string.punctuation
+    print("welcome to python password generator:)")
 
-mix = lower + upper + num + symbols
+    length = int(input("how long do you want your password to be? "))
 
-temp = random.sample(mix, length)
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    num = string.digits
+    symbols = string.punctuation
 
-password = "".join(temp)
+    mix = lower + upper + num + symbols
 
-print(password)
+    temp = random.sample(mix, length)
+
+    password = "".join(temp)
+
+    print(password)
+
+    restart = input("would you like to generate another password? ")
+    if restart == "yes":
+        main()
+
+    else:
+        print("bye!")
+        exit
+
+main()
+
+
